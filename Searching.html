@@ -9,16 +9,16 @@
 
 <!---BODY--->
 <body>
-  
+
   <div class="topnav">
       <a class="home" href="index.html">Home</a>
-      <a href=OOP1.html>OOP - Part 1</a>
-      <a href=google.com>OOP - Part 2</a>
-      <a href=google.com>Arrays</a>
-      <a href=google.com>ArrayLists</a>
-      <a href=google.com>Sorting</a>
+      <a href=http://google.com>OOP - Part 1</a>
+      <a href=http://google.com>OOP - Part 2</a>
+      <a href=http://google.com>Arrays</a>
+      <a href=http://google.com>ArrayLists</a>
+      <a href=http://google.com>Sorting</a>
       <a href=Searching.html>Searching</a>
-      <a href=google.com>Recursion</a>
+      <a href=http://google.com>Recursion</a>
   </div>
 
 <style>
@@ -26,7 +26,7 @@
         overflow-y: auto;
     }
 
-    body {
+    body, pre {
         font-family: 'Oswald', serif;
         background: url(SearchingBackground.jpeg) no-repeat center center fixed;
         height: 100%;
@@ -70,27 +70,71 @@
     <b class="title">
         WHAT IS SEARCHING?
     </b>
-    <br> Searching is the act of locating a specific element within an Array, ArrayList, or another data structure.
-    there are two main search functions: Sequential searching, and Binary searching.
-    <br> In this lesson, there will be information on searching Arrays and ArrayLists specifically, using a Linear
-    Search
-    and a Binary Search.
+    <br> Searching is the act of locating a specific element within an Array,
+    ArrayList, or another data structure. There are two main search functions:
+    Sequential searching, and Binary searching.
+    <br> This lesson will be focusing on using the Linear Search and Binary
+    search to locate an element within Arrays and ArrayLists.
     <br><br><br>
     <b class="title">
         SEQUENTIAL SEARCH
     </b>
-    <br>Sequential Search, also known as a linear search, is a search
-    <br>It is typically performed on unsorted arrays
+    <br>The linear search, sometimes also known as the sequential search, is the
+    simplest and most straightforward search. It involves looping through each
+    and every element in an array, and checking if the element is equal to the
+    key.
+    <br>It is typically performed on unsorted arrays or arrays with few elements.
+    The following code
+    <br><br>Pseudocode
 </p>
-<pre>
-    public boolean sequentialSearch(int arr[], int target){
-        for(int x = 0; x < arr.length(){
+<ol>
+  <li>Set <i>x</i> to 0</li>
+  <li>If element at index <i>x</i> is equal to the key then return true</li>
+  <li>Increment <i>x</i></li>
+  <li>Go back to Step 2</li>
+</ol>
+
+<table style="width:100%">
+  <tr>
+    <th>Array Implementation</th>
+    <th colspan="2">ArrayList Implementation</th>
+  </tr>
+  <tr>
+    <td>
+    <pre>
+    //Linear Search for Arrays
+    public boolean linearSearch(int arr[], int target){
+        for(int x = 0; x < arr.length; x++){
             if(arr[x] == target)
                 return true;
         }
         return false;
     }
-</pre>
+    </pre>
+    </td>
+    <td>
+    <pre>
+    //Linear Search for ArrayLists
+    public boolean linearSearch(List &ltInteger&gt arr, int target){
+        for(int x = 0; x < arr.size(); x++){
+            if(arr.get(x).equals(target))
+                return true;
+        }
+        return false;
+    }
+    </pre>
+    </td>
+  </tr>
+</table>
+<p>
+  Tips when using Linear Search
+  <ul>
+      <li>When choosing a search algorithm, always choose to use Binary search 
+      over linear search, unless the list is unsorted. This is because binary 
+      search has a much better time efficiency.</li>
+  </ul>
+</p>
+
 <p>
     <br> The runtime for sequential search is O(n) time, meaning it is not very inefficient.
 
@@ -106,24 +150,24 @@
 
 
 <style>
-    body {
+    body{
         color: white;
     }
 
     b.title {
         font-size: 3vw;
     }
+    th, td{
+      padding: 5px;
+      text-align: left;
+      font-size: 1.7vw;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
 
-    p {
+    p,ol, pre, li, ul {
         font-size: 1.5vw;
     }
-
-    pre {
-        font-size: 1.3vw;
-    }
 </style>
-
 </body>
-
-
 </html>
