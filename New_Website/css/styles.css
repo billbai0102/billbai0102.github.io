@@ -1,8 +1,22 @@
 body{
+    font-family: sans-serif;
     background-color: black;
 }
 
 #particles-js{
+    background-color: black;
     color: white;
-    
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.particles-js-canvas-el{
+    position:absolute;
+}
+
+#test{
+    color: white;
 }
