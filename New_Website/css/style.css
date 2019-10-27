@@ -746,9 +746,9 @@ button:focus {
 
 .bg-cta {
     position: relative;
-    background-image: url(../images/img-2.jpg);
+    background-image: url(../images/background-images/linkedin-bg.jpg);
     background-size: cover;
-    background-position: center center;
+    background-position: 50% 70%;
 }
 
 
