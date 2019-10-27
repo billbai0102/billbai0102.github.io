@@ -101,18 +101,17 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-12">
-                                <div class="text-white text-center">
+                                <div class="text-white text-center" id="social-link">
                                     <h4>Welcome.</h4>
                                     <h1 class="header_title mb-0 mt-3">I Am <span class="element font-weight-bold" data-elements="Bill Bai.,a Software Developer.,a Game Developer.,a Student."></span></h1>
                                     <ul class="social_home list-unstyled text-center pt-4">
-                                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
+                                        <li class="list-inline-item"  id="devpost-logo"><a href="https://devpost.com/billbai"><img src="images/devpost.svg" width="16px" height="16px"></a></li>
                                         <li class="list-inline-item"><a href="https://www.linkedin.com/in/bill-bai-9380a3175/"><i class="mdi mdi-linkedin"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-dribbble"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://github.com/billbai0102"><i class="mdi mdi-github-circle"></i></a></li>
+                                        <li class="list-inline-item"><a href="#contact"><i class="mdi mdi-email"></i></a></li>
                                     </ul>
                                     <div class="header_btn">
-                                        <a href="#" class="btn btn-outline-custom btn-rounded mt-4">Download CV</a>
+                                        <a href="https://docs.google.com/document/d/10hKZYiHlD_BtuYclWeaXrVXaQcpwkaVmMrC_dVLH8TI/edit?usp=sharing" class="btn btn-outline-custom btn-rounded mt-4">Download CV</a>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +137,7 @@
                             <div class="main-title-border">
                                 <i class="mdi mdi-asterisk"></i>
                             </div>
-                            <p class="text-muted mx-auto mt-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <p class="text-muted mx-auto mt-2">Software Developer & Student Based in Toronto, Canada.</p>
                         </div>
                     </div>
                 </div>
@@ -150,11 +149,11 @@
                         <div class="text-center about-detail mx-auto mt-5">
                             <h3 class="mb-3">Hello, <span class="font-weight-bold text-custom">I'm Bill Bai.</span></h3>
                             <ul class="mb-0 list-inline text-center about-work">
-                                <li class="list-inline-item mr-0 text-muted">UI/UX Designer</li>
-                                <li class="list-inline-item mr-0 text-muted">Photographer</li>
-                                <li class="list-inline-item mr-0 text-muted">Devloper</li>
+                                <li class="list-inline-item mr-0 text-muted">Software Developer</li>
+                                <li class="list-inline-item mr-0 text-muted">Game Developer</li>
+                                <li class="list-inline-item mr-0 text-muted">Entrepreneur</li>
                             </ul>
-                            <p class="text-muted mt-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <p class="text-muted mt-3">I'm a 16 year old student currently attending William Lyon Mackenzie CI, with a huge interest for programming, and using tech for social good.</p>
                         </div>
                     </div>
                 </div>
@@ -492,7 +491,7 @@
                 <div class="row mt-5 work-filter">
                     <div class="col-lg-4 webdesign wordpress">
                         <div class="work_img_box rounded">
-                            <a class="img-zoom" href="images/works/1.jpg"></a>
+                            <a class="img-zoom" href="images/works/JobSeekrDemo1.png"></a>
                             <div class="work_images">
                                 <img src="images/works/JobSeekrLogo.jpg" alt="image" class="img-fluid mx-auto d-block">
                                 <div class="work_overlay">
@@ -809,7 +808,7 @@
                             <div class="main-title-border">
                                 <i class="mdi mdi-asterisk"></i>
                             </div>
-                            <p class="text-muted mx-auto mt-2">Shoot me an email and I'll get to you as soon as possible.</p>
+                            <p class="text-muted mx-auto mt-2">Shoot me an email and I'll get back to you as soon as possible.</p>
                         </div>
                     </div>
                 </div>  
@@ -878,6 +877,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 text-right">
+                                        <input type="hidden" name="_next" value="https://billbai0102.github.io/New_Website/index.html"/>
                                         <input type="submit" class="btn btn-custom" value="Send Message">
                                     </div>
                                 </div>
@@ -905,6 +905,8 @@
                     </div>
                 </div>
             </div>
+            
+        <center> &copy; 2019 Bill Bai</center>
         </section>
         <!-- END FOOTER -->
 
@@ -931,6 +933,11 @@
         <script src="js/owl.carousel.min.js"></script>
         <!--CUSTOM JS-->
         <script src="js/custom.js"></script>
+
+<!--PARTICLES ANIMATE JS-->
+<script src="js/particles.js"></script>  
+<script src="js/particles.app.js"></script>   
+
         <script>
             $(".element").each(function() {
                 var $this = $(this);

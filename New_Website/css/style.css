@@ -34,6 +34,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700');
 
+#devpost-logo{
+    filter: invert(1) sepia(0) saturate(0) hue-rotate(175deg);
+}
+
 /*======================
         1.BASIC
 ========================*/
@@ -492,6 +496,15 @@ button:focus {
     display: inline-block;
     width: 30px;
     text-align: center;
+}
+
+#social-link{
+    position:relative;
+    z-index:9999;
+}
+
+#idk{
+    z-index: 1;
 }
 
 .scroll_down {
