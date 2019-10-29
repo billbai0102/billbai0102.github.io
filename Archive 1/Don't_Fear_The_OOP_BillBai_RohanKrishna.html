@@ -1,0 +1,406 @@
+<html>
+<head>
+	<link rel="icon"
+		type="image/png"
+		href="favicon.png">
+</head>
+<style>
+html{
+	        margin: 3em;
+}
+body{
+	   font-family: 'Oswald', serif;
+		 overflow-y: auto;
+}
+.topnav {
+		overflow: hidden;
+		background-color: ghostwhite;
+}
+
+.topnav a {
+		float: left;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 1.4vw;
+}
+
+.topnav a:hover {
+		background-color: #ddd;
+		color: black;
+}
+
+.topnav a.home {
+		background-color: orangered;
+		color: white;
+}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+<div class="topnav">
+		<a class="home" href="index.html">Home</a>
+		<a href=OOP1.html>OOP - Part 1</a>
+		<a href=OOP2.html>OOP - Part 2</a>
+		<a href=Arrays.html>Arrays</a>
+		<a href=ArrayList.html>ArrayLists</a>
+		<a href=Sorting.html>Sorting</a>
+		<a href=Searching.html>Searching</a>
+		<a href=Recursion.html>Recursion</a>
+		<a href="Projects.html">Projects</a>
+		<a href="bibliography.html">Bibliography</a>
+</div>
+<br>
+<title> Don't Fear The OOP </title>
+<body bgcolor="#42d4f4">
+<FONT FACE="Courier"> <FONT SIZE=+12>
+	<center><B> Don't Fear The OOP </B><br/>
+</font>Bill Bai, Rohan Krishna</center><br/> </FONT>
+<FONT FACE="CALIBRI"> <FONT SIZE=+1>
+	Intro: Here we explain Java and Object-Oriented programming using the example of a superhero town. For a basic
+	definition to help you understand the concept, think of Object-Oriented programming as a way of executing tasks with
+	information provided by a reference to an object (remember, an object can be anything).<br/><br/>
+	Colour key:<br/>
+	<span style="background-color: #00FF0C">Green Highlight</span>
+	- a basic English explanation<br/>
+	<span style="background-color: #FFFF00">Yellow Highlight</span>
+	- an English description formatted to look more like code<br/>
+	<span style="background-color: #FF0000">Red Highlight</span>
+	- the actual code in Java<br/>
+	<B>Bold text</B> - Java or programming terms<br/>
+	<font color="FF0000"> Red text </font> - reference to code written in red highlight<br/><br/>
+	<span style="background-color: #00FF0C">Every superhero town has a few key ingredients: headquarters, coffee bars,
+		superheroes, and a couple of villains. A standard superhero town would have 5 headquarters and be located on
+		planet Earth sometime around year 2500. </span><br/><br/>
+	<span style="background-color: #FFFF00"> SuperheroTown<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a certain number of headquarters <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a certain number of coffee bars <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a certain number of superheroes <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a certain number of villains <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is located somewhere <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exists at a certain time <br/>
+		a typical SuperheroTown would have <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number of headquarters = 5 <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;location = Earth <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time period = 2500&nbsp; </span><br/><br/>
+	<span style="background-color: #FF0000">
+		public class SuperheroTown<br/>
+		{<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int headquarters; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int coffeeBars; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int superheroes; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int villains; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String location; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int time; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public SuperheroTown() <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headquarters = 5; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	location = "Earth"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time = 2500; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		} <br/>
+	</span><br/>
+	The above <B>class</B> is a template for a <font color="FF0000"> SuperheroTown </font> <B>object</B>, or a template
+	for creating a Superhero town on Earth. This code tells us that any object of SuperheroTown, or that any superhero
+	town on Earth, has a few key traits which can have different values. For example, different towns will have
+	different number of coffee shops. In the code, <B>int</B> <font color="FF0000">headquarters</font> is a
+	<B>variable</B>. The <B>keyword</B> int tells us that the variable will store an integer, and
+	<font color="FF0000">headquarters</font> is the name of the variable. <br/><br/>
+	In the code under <font color="FF0000">public SuperheroTown()</font>, we set the number of headquarters to 5 and the
+	location to Earth for ALL superhero towns created by this template, because all superhero towns are on Earth and
+	they all must have 5 headquarters. They also all exist in the year 2500. This code is written in the
+	<B>constructor</B>, indicated by the keyword <B>public</B>, followed by the name of the class. The constructor is
+	what creates an object based on the template and <B>initializes</B> values for the declared variables.<br/><br/>
+	Now we know the key traits of a superhero town and the values of some of the traits when an object is created based
+	on the class SuperheroTown. We can now go ahead and set other values for objects of class SuperheroTown. Then we
+	will be able to manipulate these objects for our code to actually do something, to complete a task.<br/><br/>
+	Let us begin the storyline, or the task that is to be done by the code.<br/><br/>
+	<span style="background-color: #00FF0C">
+		The conflict at Starbucks coffee bar. This story takes place in a superhero town called Towntington. Towntington
+		has five superheroes, thirty coffee bars, and five villains. <br/><br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		Main Conflict <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Superhero Town Towntington is a new Superhero Town. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the number of coffee bars in Towntington is fifteen. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the number of superheroes is five. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the number of villains is five. <br/><br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public class Conflict { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main (String arguments[]) { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SuperheroTown towntington = new SuperheroTown; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;towntington.coffeeBars = 30; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;towntington.superheroes = 5; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;towntington.villains = 5; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		} <br/> <br/>
+	</span>
+	Our plot begins by creating setting some basic values to establish the setting of our storyline. An object of class
+	SuperheroTown is created by using the keyword <B>new</B> as shown in the code. This would call the constructor,
+	which creates the object. Some unique values are assigned to variables of <font color="FF0000">towntington</font>,
+	which is the created object of <font color="FF0000">SuperheroTown</font>. All of this is done in class
+	<font color="FF0000">Conflict</font>. Just as we needed a template for superhero towns on Earth, we need a template
+	for conflicts in these towns. This class will contain some information which we refer to in developing our
+	storyline. Using multiple classes helps keep code easy to read and organized. <br/> <br/>
+	Now let’s add another element to our story. Of course, we couldn’t have a superhero town without a superhero. <br/>
+	<br/>
+	<span style="background-color: #00FF0C">
+		All humans start out with 2 legs, 2 arms and 1 nose. They are either male or female and they have a name. They
+		also have a food that they carry on themselves. If asked for their name, they will reveal their name. <br/> <br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		Human <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a name <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain gender <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a food in their pocket <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain number of legs <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain number of arms <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain number of noses <br/>
+		A standard human would start with  <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 legs <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 arms <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 nose <br/>
+		When asked for name <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say name <br/><br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public class Human <br/>
+		{ <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String name; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String gender; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String currentFoodOnThem; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int legs; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int arms; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int noses; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Human() { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int legs = 2; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int arms = 2; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int noses = 1; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public String whatIsYourName() { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return name; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		} <br/> <br/>
+	</span>
+	Now we have a template to create humans. Every human will have some key traits. Some of these traits will have a
+	definite, set value, such as number of <font color="FF0000">legs</font>. Other traits will have values assigned
+	later because not all humans are identical. You can interact with the human by asking for a name. The name is
+	returned in something called a <B>return method</B>. A return type is indicated when creating a return method.
+	In this case it is a <B>String</B>. A return method doesn’t actually output anything, but gives back a value for
+	the computer to use elsewhere. <B>Methods</B> are also known as behaviours. <br/> <br/>
+	We first create a class Human since our human superhero will inherit the traits and behaviours of a
+	<font color="FF0000">human</font>. Now let’s create a superhero. <br/> <br/>
+	<span style="background-color: #00FF0C">
+		All superheroes start out with a cape, two gloves, a mask, and a certain muscle mass. They have different
+		powers. <br/> <br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		Superhero extends the idea of Human. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain number of capes <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain number of gloves   <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain number of masks <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a certain muscle mass <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have a unique super power <br/>
+		A standard superhero would start with <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one cape <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two gloves <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one mask <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 lbs of muscle <br/><br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public class Superhero extends Human{ <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int capes; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int gloves; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int masks; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int muscleMass; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String uniqueSuperPower; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Superhero() { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;capes = 1; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;masks = 1; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gloves = 2; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;muscleMass = 20; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		} <br/><br/>
+	</span>
+	In the above code, we used <B>extends</B> to indicate that superheroes are a <B>subclass</B> of Human, and will
+	inherit traits of Human in addition to having some other features. Once again we set some initial values and let
+	the rest be set once an object is created from the template. <br/> <br/>
+	Here is another example of using <B>extends</B>. We are going to add a villain to our story. <br/> <br/>
+
+	<span style="background-color: #00FF0C">Villains are based on the idea of humans. They are almost identical, the
+		only thing setting them apart is that they have a mustache, a hat, a certain "look", some level of craziness,
+		and a certain quantity of “prisoners” taken by them. The standard villain will look evil, start the day out not
+		very greedy, and not yet have prisoners in hand. <br/> <br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		Villain extends the idea of Human. <br/>
+		A Villain <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a mustache. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a hat. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a "look". <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has some level of craziness. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a certain number of prisoners in their possession. <br/>
+		For a given Villain, <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He will look mean. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He will start out with very little craziness. <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He will start the day without any prisoners. <br/> <br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public class Villain extends Human { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String mustacheColor; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String hatColor; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String look; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int craziness; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int numberOfPrisoners; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human prisoner; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Villain() { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;look = "Mean"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;craziness = 1; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfPrisoners = 0; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		} <br/> <br/>
+	</span>
+	Nothing new here, except you may have noticed that we declared a variable as
+	<font color="FF0000">Human prisoner</font>. Same concept, <font color="FF0000">Human</font> is the type and
+	<font color="FF0000">prisoner</font> is the name of the variable. When you create a class, you also create a data
+	type. A String is really an object of a String class and its own data type. You will later see that the variable
+	<font color="FF0000">prisoner</font> is really a name used to identify another object of the Human class. <br/> <br/>
+	Let’s give our villain some behaviours. Creating methods (behaviours) is how we can manipulate and interact with
+	objects to do a task. Take a close look at the next two examples of methods. <br/> <br/>
+	<span style="background-color: #00FF0C">
+		Whenever the main plot says that a villain puts his left over food into the wrong bin, his level of craziness
+		will go up by one. <br/> <br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		putFoodInRecycling <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;craziness increases by one <br/> <br/>
+	</span>
+	<span style="background-color: #FF0000">
+		putFoodInRecycling() { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;craziness++; <br/>
+		} <br/> <br/>
+	</span>
+	In this method, we add one to the value of craziness whenever our villain puts food in the recycling (villains are
+	horrible, aren’t they?). We increment craziness by one by using ++ as shown above. This is a void method, meaning
+	that it doesn’t return a value. The following is another method for our villain. <br/><br/>
+	<span style="background-color: #00FF0C">
+		If someone asks a villain how crazy he is, the villain will always respond with his level of craze. <br/><br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		howCrazyAmI <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tell them how crazy I am <br/><br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public int howCrazyAmI() { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return craziness; <br/>
+		} <br/><br/>
+	</span>
+	This is a return method. You’ve seen this before, with returning the name of a human. This is no different, except
+	our return type is an int. <br/> <br/>
+	Now we have one more method for our villain. It isn’t a different type of method, but you will see how our villain
+	interacts with another human. Translating that into Java terms, you’ll see how this next method will take in
+	information about a created object. <br/> <br/>
+	<span style="background-color: #00FF0C">
+		If the villain is supposed to take in a prisoner, tie up the specified prisoner, add 1 to the number of prisoners he
+		has taken, and then print out "Golly! [The specified prisoner] has been tied up!” <br/> <br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		takePrisoner(name) <br/>
+		add one to the number of prisoners this villain has taken. <br/>
+		print "Golly! [The specified prisoner] has been tied up!” <br/> <br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public void takePrisoner(Human prisoner) { <br/>
+		this.prisoner = prisoner; <br/>
+		numberOfPrisoners++; <br/>
+		System.out.println("The Villain has tied up " + prisoner.whatIsYourName()); <br/>
+		} <br/> <br/>
+	</span>
+	This method might seem a little confusing. In the brackets beside the method name, you see
+	<font color="FF0000">Human prisoner</font>. This is a <B>parameter</B>. It will be passed when the method is called.
+	What <font color="FF0000">Human</font> does when placed in those brackets is that it tells Java that a value is
+	being passed and that the value is of type Human. The <B>identifier</B> <font color="FF0000">prisoner</font> tells
+	Java what the variable name for that value should be called. Now the method <font color="FF0000">takePrisoner</font>
+	has a <B>local variable</B> called <font color="FF0000">prisoner</font> of type Human. Local variables cannot be
+	used outside of the method they are declared in. <br/> <br/>
+	They <B>reserved word</B> <font color="FF0000">this</font> is used to refer to the variable declared at the top of
+	the class, outside any methods (called an <B>instance variable</B>). It is useful when there are local variables and
+	instance variables with the same name, although you should generally avoid reusing identifiers (name of a variable,
+	object, method, etc.) in code. <br/> <br/>
+	Whenever the villain takes a prisoner, the variable <font color="FF0000">numberOfPrisoners</font> increases. Now,
+	there is output in this method (indicated by <font color="FF0000">System.out.println</font>), but this is different
+	from returning a value, so this is a void method. In the output, there is a String, plus another String returned
+	from a method in the Human class. Don’t get confused, <font color="FF0000">prisoner</font> is an object of class
+	Human. By writing <font color="FF0000">prisoner.whatIsYourName()</font> we are doing two things. Firstly, we are
+	saying that we want to reference code in the class that <font color="FF0000">prisoner</font> belongs to
+	(this is class Human). Secondly, we are calling the method <font color="FF0000">whatIsYourName()</font>, which is
+	located in class Human and returns a value when called. Since objects of the same class can still be unique, you
+	must use <font color="FF0000">prisoner</font>. instead of <font color="FF0000">Human</font>. when making a reference
+	. If you wanted all objects of a class to have the same values, you can use the keyword <B>static</B>. If you
+	changed the value of any variable of one object, the value of that variable would change for all objects of that
+	same class. We will not be explaining exactly how to use static in this tutorial. <br/> <br/>
+	Now it’s time for a recap. Let’s take a look at what story our program tells so far. <br/> <br/>
+	<span style="background-color: #00FF0C">
+		Here is the main plot of the Conflict at Starbucks Coffee Bar: There is a Superhero Town called Towntington.
+		Towntington has thirty coffee bars, five superheroes, and five villains. There is a male villain named
+		PetitNicolas. PetitNicolas has a red hat, and a grey mustache. PetitNicolas has a leftover brownie in his
+		pocket. Ben is a male human, and has some loose salad in his pocket (Why he has it, we will never know).
+		In our story, PetitNicolas starts out by throwing a leftover brownie into the recycling bin. He then lets
+		everyone know how crazy he is, and then takes in Ben as prisoner. <br/> <br/>
+	</span>
+	<span style="background-color: #FFFF00">
+		Here is the main plot of Conflict at Starbucks Coffee Bar; In the novel Conflict; <br/>
+		There is a town called Towntington; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Towntington has thirty coffee bars; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Towntington has five heroes; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Towntington has five villains; <br/>
+		There is a new villain named PetitNicolas; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PetitNicolas has a black hat; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PetitNicolas has a red mustache; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PetitNicolas is male; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PetitNicolas has a leftover brownie in his pocket; <br/>
+		There is a new Human named Ben; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ben is male; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ben has loose salad in his pocket <br/>
+		PetitNicolas throws his brownie into the recycling; <br/>
+		PetitNicolas tells us how crazy he is; <br/>
+		PetitNicolas takes in Ben as prisoner; <br/> <br/>
+	</span>
+	<span style="background-color: #FF0000">
+		public class Conflict{ <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String arguments[]) { <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SuperheroTown towntington= new SuperheroTown();<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;towntington.coffeeBars= 30; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;towntington.superheroes= 5; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;towntington.villains = 5; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Villain petitNicolas = new Villain(); <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;petitNicolas.hatColor = "red"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;petitNicolas.mustacheColor = "grey"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;petitNicolas.gender = "Male"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;petitNicolas.currentFoodOnThem = "Leftover Brownie"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human ben= new Human(); <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ben.gender = "Male"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ben.currentFoodOnThem = "Loose Salad"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ben.name = "Ben"; <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;petitNicolas.putFoodInRecycling(); <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(petitNicolas.howCrazyAmI()); <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;petitNicolas.takePrisoner(ben); <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+		} <br/><br/>
+	</span>
+	In the code above, we had a main method. There should be only one <B>main method</B> out of all the classes used
+	in this program. A main method simply tells Java what class to start from and is where the programmer makes use of
+	behaviours in the classes to do a task. The behaviours, or methods, are called by making reference to an object
+	belonging to the class where the behaviour is located. Now you can see how our storyline come all together. To
+	understand OOP, simply remember template (class), object, and reference. Objects are made by referencing a template,
+	which is like a recipe. Then the objects are referenced to access values and behaviours. The main advantage of
+	having objects in programming is to be able to create as many related objects as wanted while allowing each to be
+	unique in the values of their traits. Each object will have a lot of information behind the scenes which helps
+	reduce code. So hopefully our superhero town has brought you a few steps closer to understanding OOP. <br/> <br/>
+	<center><B> Don't Fear The OOP</B><br/>
+		The End <br/> <br/>
+		Bill Bai, Rohan Krishna <br/>2019 ICS4UO
+	</center>
+</font>
+</FONT>
+</html>
