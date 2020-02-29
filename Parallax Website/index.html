@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="man-image"></div>
+<div class="rellax parallax" data-rellax-speed="4"></div>
+<div class="rellax text" data-rellax-speed="10"></div>
+<div class="rellax clouds" data-rellax-speed="8"></div>
+<div class="whitespace"></div>
+
+<div class="rellax content" data-rellax-speed="5">
+    <div class="row content-container">
+        <div class="col-md-4 text-container">
+            <h4>Mont Blanc</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, minus dolores. Recusandae deleniti dolorem voluptatum alias a neque fugiat eligendi at earum ipsum quaerat, harum repellat beatae omnis! Doloremque, ab. Incidunt, ducimus, labore ipsam sequi eligendi ab unde odio est voluptatibus eum cumque earum? Debitis temporibus a amet rerum libero, omnis similique. Architecto maxime esse et sit est necessitatibus tempora veritatis nobis quaerat laudantium earum ab eveniet voluptate velit facilis, exercitationem tenetur officia? Fuga.</p>
+            <a href="#" class='btn explore-btn'>Explore More.</a>
+        </div>
+        <div class="col-md-8 img-container">
+            <div class="row">
+                <div class="col-md-3 img-small">
+                    <img src="./Images/LeftImg.png" alt="">
+                </div>
+                <div class="col-md-4 img-large">
+                    <img src="./Images/CenterImg.png" alt="">
+                </div>
+                <div class="col-md-3 img-small">
+                    <img src="./Images/RightImg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script src="./JS/rellax.min.js"></script>
+    <script type="text/javascript">
+        var rellax = new Rellax('.rellax');
+    </script>
+</body>
+</html>
